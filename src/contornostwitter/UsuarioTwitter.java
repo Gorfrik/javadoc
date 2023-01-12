@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package contornostwitter;
 
 import java.time.LocalDate;
@@ -19,29 +15,12 @@ import java.time.LocalDate;
  * @see Tweet
  */
 public class UsuarioTwitter {
-    /**
-     * El nic guarda el apodo del usuario.
-     */
+
     private String nic;
-    /**
-     * Aqui se guarda el nombre del usuario
-     */
     private String nombre;
-     /**
-     * Aqui se guarda el primer apellido del usuario
-     */
     private String apellido1;
-     /**
-     * Aqui se guarda el segundo apellido del usuario
-     */
     private String apellido2;
-    /**
-     * En esta variable guardamos el email del usuario
-     */
     private String email;
-    /**
-     * En esta variable guardamos su fecha de nacimiento
-     */
     private LocalDate fechaNaci;
     /**
      * En este consructor daremos un usuario de alta por defecto.
@@ -63,12 +42,12 @@ public class UsuarioTwitter {
      * Este constructor pide todos los datos requeridos para dar de alta un
      * usuario con toda la informacion completa.
      * 
-     * @param nic
-     * @param nombre
-     * @param apellido1
-     * @param apellido2
-     * @param email
-     * @param fechaNaci 
+     * @param nic Apodo del usuario.
+     * @param nombre Nombre del usuario
+     * @param apellido1 Primer apellido del usuario
+     * @param apellido2 Segundo apellido del usuario
+     * @param email Email del usuario
+     * @param fechaNaci Fecha de nacimiento del usuario
      */
     public UsuarioTwitter(String nic, String nombre, String apellido1, String apellido2, String email, LocalDate fechaNaci) {
         this.nic = nic;
@@ -79,7 +58,7 @@ public class UsuarioTwitter {
         this.fechaNaci = fechaNaci;
     }
     /**
-     * Visualiza el apodo.
+     * Retorna String apodo.
      * @return nic
      */
     public String getNic() {
@@ -87,63 +66,63 @@ public class UsuarioTwitter {
         
     }
     /**
-     * Guarda un apodo
-     * @param nic 
+     * Nuevo valor apodo
+     * @param nic Nuevo valor String para el apodo
      */
     public void setNic(String nic) {
         this.nic = nic;
     }
     /**
-     * Visualiza el nombre.
-     * @return nombre
+     * Retorna el nombre.
+     * @return devuelve el nombre
      */
     public String getNombre() {
         return nombre;
     }
     /**
-     * Guarda el nombre del usuario
-     * @param nombre 
+     * Nuevo valor nombre
+     * @param nombre nuevo valor para el nombre del usuario.
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     /**
-     * Visualiza el primer apellido
-     * @return 
+     * Retorna el primer apellido
+     * @return devuelve el primer apellido
      */
     public String getApellido1() {
         return apellido1;
     }
     /**
-     * Guarda el primer apellido
-     * @param apellido1 
+     * Nuevo valor para primer apellido
+     * @param apellido1 Nuevo valor para el primer apellido
      */
     public void setApellido1(String apellido1) {
         this.apellido1 = apellido1;
     }
     /**
-     * Visualiza el segundo apellido
-     * @return 
+     * Retorna el segundo apellido
+     * @return devuelve el valor del segundo apellido
      */
     public String getApellido2() {
         return apellido2;
     }
     /**
-     * Guarda el segundo apellido
-     * @param apellido2 
+     * Nuevo valor para el segundo apellido
+     * @param apellido2 Establece un nuevo valor para el segundo apellido.
      */
     public void setApellido2(String apellido2) {
         this.apellido2 = apellido2;
     }
     /**
-     * Visualiza el email del usuario
-     * @return 
+     * Retorna el email del usuario
+     * @return devuelve el email del usuario
      */
     public String getEmail() {
         return email;
     }
     /**
-     * Guarda el email del usuario
+     * Nuevo valor el email del usuario
      * @param email 
      */
     public void setEmail(String email) {
@@ -176,7 +155,7 @@ public class UsuarioTwitter {
      * Este metodo muestra toda la informacion del usuario.
      * Se devuelve un String con toda la informacion de el usuario.
      * @return 
-     * @Override
+     * 
      */
     public String toString() {
         return "UsuarioTwitter{" + "nic=" + nic + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", email=" + email + ", fechaNaci=" + fechaNaci + '}';
