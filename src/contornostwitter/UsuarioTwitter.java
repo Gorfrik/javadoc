@@ -1,6 +1,7 @@
 package contornostwitter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Objeto donde se guardan todos los datos de cada usuario.
@@ -123,21 +124,21 @@ public class UsuarioTwitter {
     }
     /**
      * Nuevo valor el email del usuario
-     * @param email 
+     * @param email Establece un nuevo email para el usuario.
      */
     public void setEmail(String email) {
         this.email = email;
     }
     /**
-     * Visualiza la fecha de nacimiento
-     * @return 
+     * Retorne la fecha de nacimiento
+     * @return Devuelve la fecha de nacimiento del usuario.
      */
     public LocalDate getFechaNaci() {
         return fechaNaci;
     }
     /**
-     * Guarda la fecha de nacimiento
-     * @param fechaNaci 
+     * Nuevo valor para la fecha de nacimiento
+     * @param fechaNaci Establece un nuevo valor para la fecha de nacimiento.
      */
     public void setFechaNaci(LocalDate fechaNaci) {
         this.fechaNaci = fechaNaci;
@@ -145,15 +146,28 @@ public class UsuarioTwitter {
     /**
      * Este metodo resta a la fecha de nacimiento la fecha actual para obtener
      * su edad.
-     * @return edad
+     * @return edad Devuelve la resusltante de restar la fecha actual a su 
+     * fecha de nacimiento.
      */
     public int edad() {
-        Date
-        return
+        int edad=0;
+        int AnioNaci=this.fechaNaci.getYear();
+        int MesNaci=this.fechaNaci.getMonthValue();
+     
+        LocalDate FechaHoy= LocalDate.now();
+        int anio = FechaHoy.getYear();
+        int Mes = FechaHoy.getMonthValue();
+        
+        edad=anio-AnioNaci;
+        if(MesNaci<Mes){
+        edad--;
+        }
+        
+        return edad;
     }
     /**
-     * Este metodo muestra toda la informacion del usuario.
-     * Se devuelve un String con toda la informacion de el usuario.
+     * Este metodo que devuelve informacion de usuario.
+     * El metodo devuelve un String con toda la informacion de el usuario.
      * @return 
      * 
      */

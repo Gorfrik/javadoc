@@ -168,9 +168,9 @@ public class Tweet {
         return this.contenido.length();
     }
     /**
-     * Visualiza todas las variables del objeto en un string
-     * @return todo lo que contiene el objeto
-     * 
+     * Retorna todas las variables del objeto en un string
+     * @return todo lo que contiene el objeto concantenando sus variables en 
+     * un String.
      */
     
     public String toString() {
