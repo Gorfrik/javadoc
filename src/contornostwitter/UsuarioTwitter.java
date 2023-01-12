@@ -187,7 +187,7 @@ public class UsuarioTwitter {
         int Mes = FechaHoy.getMonthValue();
 
         edad = anio - AnioNaci;
-        if (MesNaci < Mes) {
+        if (MesNaci > Mes) {
             edad--;
         }
 
