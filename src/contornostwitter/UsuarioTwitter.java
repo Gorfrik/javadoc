@@ -202,10 +202,9 @@ public class UsuarioTwitter {
     }
 
     /**
-     * Este metodo que devuelve informacion de usuario. El metodo devuelve un
-     * String con toda la informacion de el usuario.
+     * Este metodo que devuelve informacion de usuario. 
      *
-     * @return
+     * @return devuelve un String con toda la informacion de el usuario.
      *
      */
     public String toString() {
