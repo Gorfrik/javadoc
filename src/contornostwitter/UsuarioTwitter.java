@@ -2,7 +2,6 @@ package contornostwitter;
 
 import java.time.LocalDate;
 
-
 /**
  * Objeto donde se guardan todos los datos de cada usuario.
  *
@@ -192,13 +191,13 @@ public class UsuarioTwitter {
         if (MesNaci > Mes) {
             edad--;
         }
-        if (MesNaci == Mes){
-            if (DiaNaci>Dia){
-            edad--;
+        if (MesNaci == Mes) {
+            if (DiaNaci > Dia) {
+                edad--;
+            } else if (DiaNaci == Dia) {
+                System.out.println("Feliz Cumpleaños");
             }
-            else if(DiaNaci==Dia){
-                System.out.println("Feliz Cumpleaños");}
-
+        }
         return edad;
     }
 
