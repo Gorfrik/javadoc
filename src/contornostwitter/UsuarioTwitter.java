@@ -1,7 +1,7 @@
 package contornostwitter;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
 
 /**
  * Objeto donde se guardan todos los datos de cada usuario.
@@ -181,15 +181,23 @@ public class UsuarioTwitter {
         int edad = 0;
         int AnioNaci = this.fechaNaci.getYear();
         int MesNaci = this.fechaNaci.getMonthValue();
+        int DiaNaci = fechaNaci.getDayOfMonth();
 
         LocalDate FechaHoy = LocalDate.now();
         int anio = FechaHoy.getYear();
         int Mes = FechaHoy.getMonthValue();
+        int Dia = FechaHoy.getDayOfMonth();
 
         edad = anio - AnioNaci;
         if (MesNaci > Mes) {
             edad--;
         }
+        if (MesNaci == Mes){
+            if (DiaNaci>Dia){
+            edad--;
+            }
+            else if(DiaNaci==Dia){
+                System.out.println("Feliz Cumpleaños");}
 
         return edad;
     }
