@@ -128,7 +128,8 @@ public class Tweet {
     /**
      * Nuevo valor para el numero de retweets
      *
-     * @param retweets
+     * @param retweets Nuevo valor para la cantidad de retweets que 
+     * tiene un tweet.
      */
     public void setRetweets(int retweets) {
         this.retweets = retweets;
