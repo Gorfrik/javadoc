@@ -6,7 +6,14 @@ import java.time.LocalDateTime;
  * Esta clase se utiliza para crear un tweet.
  *
  * Utiliza 2 constructores para recoger la informacion en las variables.
- *
+ * <ul>
+ *      <li>usuario => Objeto de tipo UsuarioTwitter que tiene los datos del usuario</li>
+ *      <li>fecha => Fecha en la que se creo el Tweet</li>
+ *      <li>contenido => El contenido guarda el texto del Tweet</li>
+ *      <li>retweets => Numero de retweets que tiene el Tweet</li>
+ *      <li>like => Numero de likes que tiene el Tweet</li>
+ *      <li>views => Numero de views que tiene el Tweet</li>
+ * </ul>
  * @author usuario
  * @version 1.0
  * @since 1.0
@@ -14,7 +21,7 @@ import java.time.LocalDateTime;
  */
 public class Tweet {
 
-    private final String usuario;
+    private final UsuarioTwitter usuario= new UsuarioTwitter();;
     private final LocalDateTime fecha;
     private String contenido;
     private int retweets;
@@ -26,11 +33,9 @@ public class Tweet {
      *
      * Constructor que crea un Tweet basico con nombre y contenido.
      *
-     * @param usuario Nombre de la persona que realiza el Tweet
      * @param contenido El contenido guarda el texto del Tweet
      */
-    public Tweet(String usuario, String contenido) {
-        this.usuario = usuario;
+    public Tweet(String contenido) { 
         this.contenido = contenido;
         this.fecha = LocalDateTime.now();
         this.retweets = 0;
@@ -41,15 +46,13 @@ public class Tweet {
     /**
      * En este constructor asignamos un valor a todas las variables.
      *
-     * @param usuario Nombre de la persona que realiza el Tweet
      * @param fecha Fecha en la que se creo el Tweet
      * @param contenido El contenido guarda el texto del Tweet
      * @param retweets Numero de retweets que tiene el Tweet
      * @param like Numero de likes que tiene el Tweet
      * @param views Numero de views que tiene el Tweet
      */
-    public Tweet(String usuario, LocalDateTime fecha, String contenido, int retweets, int like, int views) {
-        this.usuario = usuario;
+    public Tweet(LocalDateTime fecha, String contenido, int retweets, int like, int views) {
         this.fecha = fecha;
         this.contenido = contenido;
         this.retweets = retweets;
@@ -80,7 +83,7 @@ public class Tweet {
      *
      * @return devuelve el nombre del usuario
      */
-    public String getUsuario() {
+    public UsuarioTwitter getUsuario() {
         return usuario;
     }
 

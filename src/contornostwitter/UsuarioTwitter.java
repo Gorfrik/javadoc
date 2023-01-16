@@ -9,6 +9,15 @@ import java.time.LocalDate;
  * excepto el nombre y la fecha de nacimiento que una vez guardado no se
  * modifican.
  *
+ * <ul>
+ *      <li> nic => Apodo del usuario.</li>
+        <li> nombre => Nombre del usuario</li>
+        <li> apellido1 => Primer apellido del usuario</li>
+        <li> apellido2 => Segundo apellido del usuario</li>
+        <li> email => Email del usuario</li>
+        <li> fechaNaci => Fecha de nacimiento del usuario</li>
+ * </ul>
+ * 
  * @author usuario
  * @version 1.0
  * @since 1.0
