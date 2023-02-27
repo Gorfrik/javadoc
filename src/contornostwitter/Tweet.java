@@ -109,7 +109,7 @@ public class Tweet {
      * Nuevo contenido de un tweet. Nuevo contenido si es menor de 280
      * caracteres sino guarda null.
      *
-     * @param contenido
+     * @param contenido Nuevo valor para el contenido de un tweet
      */
     public void setContenido(String contenido) {
         if (contenido.length() <= 280) {

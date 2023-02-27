@@ -3,19 +3,19 @@ package contornostwitter;
 import java.time.LocalDate;
 
 /**
- * Objeto donde se guardan todos los datos de cada usuario.
+ * 
+ *Objeto donde se guardan todos los datos de cada usuario.
  *
  * En esta clase guardamos la informacion de el usuario, todo se podra modificar
  * excepto el nombre y la fecha de nacimiento que una vez guardado no se
  * modifican.
- *
  * <ul>
- *      <li> nic => Apodo del usuario.</li>
-        <li> nombre => Nombre del usuario</li>
-        <li> apellido1 => Primer apellido del usuario</li>
-        <li> apellido2 => Segundo apellido del usuario</li>
-        <li> email => Email del usuario</li>
-        <li> fechaNaci => Fecha de nacimiento del usuario</li>
+ *       <li> nic => Apodo del usuario.</li>
+ *       <li> nombre => Nombre del usuario</li>
+ *       <li> apellido1 => Primer apellido del usuario</li>
+ *       <li> apellido2 => Segundo apellido del usuario</li>
+ *       <li> email => Email del usuario</li>
+ *       <li> fechaNaci => Fecha de nacimiento del usuario</li>
  * </ul>
  * 
  * @author usuario
@@ -23,6 +23,8 @@ import java.time.LocalDate;
  * @since 1.0
  * @see Tweet
  */
+
+
 public class UsuarioTwitter {
 
     private String nic;
@@ -33,10 +35,19 @@ public class UsuarioTwitter {
     private LocalDate fechaNaci;
 
     /**
-     * En este consructor daremos un usuario de alta por defecto.
+     * En este consructor daremos un usuario de alta por defecto.<br>
      *
-     * Este metodo pone por defecto un usuario para realizar pruebas.
+     * Este metodo pone por defecto un usuario para realizar pruebas.<br>
      *
+     * Se ponen los siguientes valores:<br>
+     * 
+     *  nic > El alias por defercto = @fake_bot<br>
+     *  nombre > El nombre por defecto = Elon<br>
+     *  apellido1 > El valor del apellido1 = Musk<br>
+     *  apellido2 > El valor del apellido2 = null<br>
+     *  email > El email del usuario = fakebot@twitter.com<br>
+     *  fechaNaci > Fecha de nacimiento = fecha actual<br>
+     * 
      */
     public UsuarioTwitter() {
         this.nic = "@fake_bot";
@@ -70,9 +81,9 @@ public class UsuarioTwitter {
     }
 
     /**
-     * Retorna String apodo.
+     * Devuelve el valor del apodo.
      *
-     * @return nic
+     * @return nic devuelve el valor del apodo del usuario.
      */
     public String getNic() {
         return nic;
@@ -80,9 +91,9 @@ public class UsuarioTwitter {
     }
 
     /**
-     * Nuevo valor apodo
+     * Establece el valor del apodo.
      *
-     * @param nic Nuevo valor String para el apodo
+     * @param nic Nuevo valor String para el apodo del usuario.
      */
     public void setNic(String nic) {
         this.nic = nic;
